@@ -15,13 +15,21 @@ const slides = document.getElementsByClassName("carousel-item")
 let slidePosition= 0
 const totalSlides = slides.length
 let dotsNav = document.getElementsByClassName("carousel-indicator")
-console.log(dotsNav)
-console.log(slides)
+let timerId = setInterval(function moveSlide(){
+    moveToNextSlide()
+},2800)
 
 
-
-document.getElementById("carousel-button-next").addEventListener("click", moveToNextSlide);
-document.getElementById("carousel-button-prev").addEventListener("click", moveToPrevSlide);
+const nextBtn = document.getElementById("carousel-button-next")
+const prevBtn = document.getElementById("carousel-button-prev")
+nextBtn.addEventListener("click",function(){
+    clearInterval(timerId)
+    moveToNextSlide()
+} );
+prevBtn.addEventListener("click", function(){
+    clearInterval(timerId)
+    moveToPrevSlide()
+});
 
 function moveToNextSlide() {
     hideAllSlides()
