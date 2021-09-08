@@ -1,0 +1,107 @@
+body{
+    margin:0;
+}
+
+.carousel{
+max-width:600px;
+position:relative;
+width:80%;
+margin: 0 auto;
+
+}
+
+img{
+    width:100%;
+    max-width:600px;
+    height:auto;
+    /* height:100%;
+    object-fit:cover; */
+}
+
+.carousel-item,
+.carousel-item-hidden {
+
+    display:none;
+}
+
+.carousel-item-visible{
+    display:block;
+    animation:fadeVisibility 0.5s;
+    
+
+}
+
+.carousel-actions{
+    display:flex;
+    width: 100%;
+    justify-content:space-between;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.carousel-nav{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    position:absolute;
+    top:90%;
+    padding:10px 0;
+}
+
+.carousel-indicator{
+    border:0;
+    border-radius:50%;
+    height: 15px;
+    width: 15px;
+    background: rgba(0,0,0,0.8);
+    margin:0 10px;
+    
+
+}
+
+.carousel-indicator-current{
+    border:0;
+    border-radius:50%;
+    height: 15px;
+    width: 15px;
+    background: rgb(69, 172, 82);
+    margin:0 10px;
+}
+
+
+
+
+
+#carousel-button-prev, #carousel-button-next{
+    border-radius: 50%;
+    background-color: transparent;
+    border:0;
+    cursor:pointer;
+    
+}
+
+#carousel-button-prev{
+    margin-left: 20px;
+}
+
+#carousel-button-next{
+    margin-right: 20px;
+}
+
+#carousel-button-prev img{
+    width:20px;
+}
+
+#carousel-button-next img{
+    width:20px;
+}
+
+
+
+@keyframes fadeVisibility {
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+
